@@ -1,0 +1,124 @@
+.hero-section-home{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, hsl(240, 10%, 3%) 0%, hsl(268, 68%, 18%) 40%, hsl(268, 70%, 35%) 100%),
+              radial-gradient(1200px 600px at 20% -10%, rgba(170, 110, 255, .35), transparent 60%),
+              radial-gradient(900px 500px at 90% 10%, rgba(120, 70, 255, .25), transparent 70%);
+    color: hsl(280, 100%, 97%);
+    min-height: 80vh;   
+}
+
+.navbar-hero-section-home{
+    height: 150px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background: transparent;
+    color: #fefefe;
+}
+
+.first-item-nabar{
+    display: flex;
+    height: 100%;
+    width: auto;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.logo-navbar{
+    height: 30px;
+    width: 30px;
+}
+
+.title-navbar{
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.second-item-navbar{
+    display: flex;
+    height: 100%;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-navigate{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.item-navigate{
+    font-weight: 600;
+    opacity: 0.7;
+}
+
+.content-hero-section{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 100px 0 0 0;
+    height: auto;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
+
+.title-content-hero-section{
+    font-size: 3.5rem;
+    font-weight: 900;
+    width: 25%;
+}
+
+.subtitle-content-hero-section{
+    font-size: 1.3rem;
+    font-weight: 500;
+    opacity: 0.8;
+    width: 30%;
+    line-height: 1.5;
+}
+
+.container-buttons-content-hero-section{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin: 50px 0 0 0;
+}
+
+.item-button{
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    font-size: 1.3rem;
+    font-weight: 900;
+    transition: 0.4s ease;
+    color: hsl(280, 100%, 97%);
+}
+
+#button-1{
+    background: linear-gradient(100deg, hsl(268, 80%, 55%) 0%, hsl(268, 100%, 70%) 100%);
+}
+
+#button-1:hover { transform: translateY(-2px); filter: brightness(1.05); }
+#button-1:active { transform: translateY(0); }
+
+#button-2{
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px) saturate(150%);
+    -webkit-backdrop-filter: blur(12px) saturate(150%);
+}
+
+#button-2:hover {
+  background: rgba(170, 110, 255, 0.25);
+  transform: translateY(-2px) scale(1.03);
+}
+
+#button-2:active {
+  transform: translateY(0) scale(0.98);
+}

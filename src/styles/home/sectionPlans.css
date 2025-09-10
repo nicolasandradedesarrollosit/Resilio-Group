@@ -1,0 +1,124 @@
+.title-section-plans{
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.subtitle-section-plans{
+    font-weight: 600;
+    opacity: 0.7;
+    letter-spacing: 0.6px;
+    font-size: 1.2rem;
+    margin: 20px 0 0 0;
+}
+
+.container-cards-section-plans{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin: 100px 0 100px 0;
+    justify-content: center;
+    width: 100%;
+}
+
+.container-cards-plans{
+    display: flex;
+    flex-direction: row;
+    height: 400px;
+    width: 500px;
+    padding: 2rem;
+    position: relative;
+}
+
+.content-card-plans{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+    width: 80%;
+}
+
+.title-card-plan{
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: hsl(268, 80%, 55%);
+}
+
+.container-payment,
+.container-features{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+}
+
+.container-payment{
+    margin: 20px 0 20px 0;
+}
+
+.price-card-plan{
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.period-card{
+    font-size: 1.2rem;
+    opacity: 0.7;
+}
+
+.emoji-card{
+    font-size: 1.5rem;
+}
+
+.feature-card-plan{
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+#card-plan-0,
+#card-plan-2{
+    border: 3px solid #cecece;
+    border-radius: 1rem;
+}
+
+#card-plan-1{
+    border: 3px solid hsl(268, 80%, 55%);
+    border-radius: 1rem;
+}
+
+.container-button-send{
+    background-color: #cecece;
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    left: 0;
+    border-bottom-left-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+    display: flex;
+    align-items: center;
+}
+
+#button-card-0,
+#button-card-2{
+    background: hsl(268, 80%, 55%);
+    width: auto;
+    height: 50%;
+    font-size: 1.5rem;
+    margin: 0 0 0 30px;
+    padding: 1rem;
+    border-radius: 2rem;
+    font-weight: 900;
+    color: #cecece;
+}
+
+#button-card-1{
+    background-color: #212121;
+    width: auto;
+    height: 50%;
+    font-size: 1.5rem;
+    margin: 0 0 0 30px;
+    padding: 1rem;
+    border-radius: 2rem;
+    font-weight: 900;
+    color: #cecece;
+}
