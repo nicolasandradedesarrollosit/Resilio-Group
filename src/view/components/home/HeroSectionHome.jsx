@@ -10,9 +10,6 @@ function HeroSectionHome(){
                 <navbar className='navbar-hero-section-home'>
                     <div className='first-item-navbar'>
                         <img className='logo-navbar' src={logo} alt='logo' />
-                        <span className='title-navbar'>
-                            Resilio Group
-                        </span>
                     </div>
                     <div className='second-item-navbar'>
                         <ul className='list-navigate'>

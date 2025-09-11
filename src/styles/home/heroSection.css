@@ -7,11 +7,11 @@
               radial-gradient(1200px 600px at 20% -10%, rgba(170, 110, 255, .35), transparent 60%),
               radial-gradient(900px 500px at 90% 10%, rgba(120, 70, 255, .25), transparent 70%);
     color: hsl(280, 100%, 97%);
-    min-height: 90vh;   
+    min-height: 70vh;   
 }
 
 .navbar-hero-section-home{
-    height: 150px;
+    height: 100px;
     width: 100%;
     display: flex;
     flex-direction: row;
