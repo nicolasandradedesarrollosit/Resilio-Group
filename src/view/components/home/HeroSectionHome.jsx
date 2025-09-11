@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../../styles/home/heroSection.css';
 import { Link } from 'react-router-dom';
+import logo from '../../../../public/logo-resilio-group.png';
 
 function HeroSectionHome(){
     return(
@@ -8,7 +9,7 @@ function HeroSectionHome(){
             <section className='hero-section-home'>
                 <navbar className='navbar-hero-section-home'>
                     <div className='first-item-navbar'>
-                        <img className='logo-navbar' src="/logo-resilio-group.png" alt='logo' />
+                        <img className='logo-navbar' src={logo} alt='logo' />
                         <span className='title-navbar'>
                             Resilio Group
                         </span>
