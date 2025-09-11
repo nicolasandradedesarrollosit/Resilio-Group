@@ -5,6 +5,20 @@ import SectionHowWorks from './SectionHowWorks';
 import SectionPlans from './SectionPlans';
 
 function MainSectionHome(){
+    const stats = [
+        {
+            stat: "+200",
+            name: "Locales con beneficios"
+        },
+        {
+            stat: "+600",
+            name: "Usuarios registrados"
+        },
+        {
+            stat: "+50",
+            name: "Nuevos beneficios cada semana"
+        }
+    ];
     return(
         <>
             <main className='section-main-home'>
@@ -26,6 +40,20 @@ function MainSectionHome(){
                 </section>
                 <section id='planes' className='container-section-plans'>
                     <SectionPlans />
+                </section>
+                <section className='container-stats-section'>
+                        {stats.map((item) => {
+                            return(
+                                <div className='card-item'>
+                                    <span className='stat-card'>
+                                        {item.stat}
+                                    </span>
+                                    <span className='name-card'>
+                                        {item.name}
+                                    </span>
+                                </div>
+                            )
+                        })}
                 </section>
             </main>
         </>

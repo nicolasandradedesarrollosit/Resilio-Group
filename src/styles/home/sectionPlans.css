@@ -86,7 +86,7 @@
 }
 
 .container-button-send{
-    background-color: #cecece;
+    background-color: #212121;
     position: absolute;
     width: 100%;
     height: 30%;
@@ -100,29 +100,104 @@
 
 #button-card-0,
 #button-card-2{
-    background: hsl(268, 80%, 55%);
-    width: auto;
-    height: 50%;
-    font-size: 1.5rem;
-    margin: 0 0 0 30px;
-    padding: 1rem;
-    border-radius: 2rem;
-    font-weight: 900;
+    position: relative;
+    padding: 16px 32px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
     color: #cecece;
+    background: linear-gradient(135deg, #6b46c1, #8b5cf6, #a855f7);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    box-shadow: 
+        0 0 20px rgba(139, 92, 246, 0.3),
+        0 0 40px rgba(139, 92, 246, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    margin: 0 0 0 30px;
 }
+
+#button-card-0::before,
+#button-card-2::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.5s ease;
+}
+
+#button-card-0:hover,
+#button-card-2:hover{
+    transform: translateY(-2px);
+    box-shadow: 
+        0 0 30px rgba(139, 92, 246, 0.6),
+        0 0 60px rgba(139, 92, 246, 0.4),
+        0 0 80px rgba(139, 92, 246, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+#button-card-0:hover::before,
+#button-card-2:hover::before{
+    left: 100%;
+}
+
+#button-card-0:active,
+#button-card-2:active{
+    transform: translateY(0);
+    box-shadow: 
+        0 0 20px rgba(139, 92, 246, 0.8),
+        0 0 40px rgba(139, 92, 246, 0.6);
+}
+
 
 #button-card-1{
-    background-color: #212121;
-    width: auto;
-    height: 50%;
-    font-size: 1.5rem;
-    margin: 0 0 0 30px;
-    padding: 1rem;
-    border-radius: 2rem;
-    font-weight: 900;
+    position: relative;
+    padding: 16px 32px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
     color: #cecece;
+    background: transparent;
+    border: 2px solid #8b5cf6;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    box-shadow: 
+        0 0 20px rgba(139, 92, 246, 0.2),
+        inset 0 0 20px rgba(139, 92, 246, 0.05);
+    margin: 0 0 0 30px;
 }
 
+#button-card-1::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #8b5cf6, #a855f7);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+#button-card-1:hover{
+    border-color: transparent;
+    transform: translateY(-2px);
+    box-shadow: 
+        0 0 30px rgba(139, 92, 246, 0.5),
+        0 0 60px rgba(139, 92, 246, 0.3);
+}
+
+#button-card-1:hover::before{
+    opacity: 1;
+}
 
 @media screen and (max-width: 1024px) {
     .title-section-plans{
