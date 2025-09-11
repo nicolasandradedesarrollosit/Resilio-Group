@@ -24,7 +24,7 @@
     display: flex;
     flex-direction: row;
     height: 400px;
-    width: 500px;
+    width: 30%;
     padding: 2rem;
     position: relative;
 }
@@ -121,4 +121,265 @@
     border-radius: 2rem;
     font-weight: 900;
     color: #cecece;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .title-section-plans{
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    
+    .subtitle-section-plans{
+        font-size: 1.1rem;
+        text-align: center;
+        padding: 0 20px;
+    }
+    
+    .container-cards-section-plans{
+        gap: 30px;
+        margin: 80px 20px 80px 20px;
+    }
+    
+    .container-cards-plans{
+        width: 32%;
+        height: 380px;
+        padding: 1.5rem;
+    }
+    
+    .content-card-plans{
+        width: 85%;
+        gap: 8px;
+    }
+    
+    .title-card-plan{
+        font-size: 1.1rem;
+    }
+    
+    .price-card-plan{
+        font-size: 1.3rem;
+    }
+    
+    .period-card{
+        font-size: 1.1rem;
+    }
+    
+    .emoji-card{
+        font-size: 1.3rem;
+    }
+    
+    .feature-card-plan{
+        font-size: 1.1rem;
+    }
+    
+    #button-card-0,
+    #button-card-1,
+    #button-card-2{
+        font-size: 1.3rem;
+        padding: 0.8rem;
+        margin: 0 0 0 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .title-section-plans{
+        font-size: 1.6rem;
+        padding: 0 15px;
+    }
+    
+    .subtitle-section-plans{
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+    
+    .container-cards-section-plans{
+        flex-direction: column;
+        gap: 40px;
+        margin: 60px 15px 60px 15px;
+        align-items: center;
+    }
+    
+    .container-cards-plans{
+        width: 100%;
+        max-width: 400px;
+        height: 350px;
+        padding: 1.5rem;
+    }
+    
+    .content-card-plans{
+        width: 90%;
+        gap: 6px;
+    }
+    
+    .title-card-plan{
+        font-size: 1rem;
+    }
+    
+    .container-payment{
+        margin: 15px 0 15px 0;
+    }
+    
+    .price-card-plan{
+        font-size: 1.2rem;
+    }
+    
+    .period-card{
+        font-size: 1rem;
+    }
+    
+    .emoji-card{
+        font-size: 1.2rem;
+    }
+    
+    .feature-card-plan{
+        font-size: 1rem;
+    }
+    
+    .container-button-send{
+        height: 25%;
+    }
+    
+    #button-card-0,
+    #button-card-1,
+    #button-card-2{
+        font-size: 1.2rem;
+        padding: 0.7rem;
+        margin: 0 0 0 15px;
+        height: 60%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .title-section-plans{
+        font-size: 1.4rem;
+        padding: 0 10px;
+    }
+    
+    .subtitle-section-plans{
+        font-size: 0.9rem;
+        padding: 0 10px;
+        margin: 15px 0 0 0;
+    }
+    
+    .container-cards-section-plans{
+        gap: 30px;
+        margin: 50px 10px 50px 10px;
+    }
+    
+    .container-cards-plans{
+        width: 100%;
+        max-width: 350px;
+        height: 320px;
+        padding: 1.2rem;
+    }
+    
+    .content-card-plans{
+        width: 95%;
+        gap: 5px;
+    }
+    
+    .title-card-plan{
+        font-size: 0.95rem;
+    }
+    
+    .container-payment{
+        margin: 10px 0 10px 0;
+    }
+    
+    .price-card-plan{
+        font-size: 1.1rem;
+    }
+    
+    .period-card{
+        font-size: 0.9rem;
+    }
+    
+    .emoji-card{
+        font-size: 1.1rem;
+    }
+    
+    .feature-card-plan{
+        font-size: 0.9rem;
+    }
+    
+    .container-button-send{
+        height: 22%;
+    }
+    
+    #button-card-0,
+    #button-card-1,
+    #button-card-2{
+        font-size: 1.1rem;
+        padding: 0.6rem;
+        margin: 0 0 0 10px;
+        height: 65%;
+        border-radius: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .title-section-plans{
+        font-size: 1.2rem;
+        padding: 0 5px;
+    }
+    
+    .subtitle-section-plans{
+        font-size: 0.8rem;
+        padding: 0 5px;
+        margin: 10px 0 0 0;
+    }
+    
+    .container-cards-section-plans{
+        gap: 25px;
+        margin: 40px 5px 40px 5px;
+    }
+    
+    .container-cards-plans{
+        width: 100%;
+        height: 300px;
+        padding: 1rem;
+    }
+    
+    .content-card-plans{
+        width: 100%;
+        gap: 4px;
+    }
+    
+    .title-card-plan{
+        font-size: 0.9rem;
+    }
+    
+    .container-payment{
+        margin: 8px 0 8px 0;
+    }
+    
+    .price-card-plan{
+        font-size: 1rem;
+    }
+    
+    .period-card{
+        font-size: 0.8rem;
+    }
+    
+    .emoji-card{
+        font-size: 1rem;
+    }
+    
+    .feature-card-plan{
+        font-size: 0.8rem;
+    }
+    
+    .container-button-send{
+        height: 20%;
+    }
+    
+    #button-card-0,
+    #button-card-1,
+    #button-card-2{
+        font-size: 1rem;
+        padding: 0.5rem;
+        margin: 0 0 0 8px;
+        height: 70%;
+        border-radius: 1.2rem;
+    }
 }

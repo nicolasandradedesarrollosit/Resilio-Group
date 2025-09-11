@@ -9,10 +9,10 @@
 }
 
 .video-demo-main{
-    height: 644px;
-    width: 916px;
+    height: 50vh;
+    width: 50%;
     border-radius: 1rem;
-    margin: -400px 0 0 0;
+    margin: -100px 0 0 0;
     background: linear-gradient(180deg, hsl(240, 5%, 90%) 0%, hsl(0,0%,100%) 100%);
     box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.2);
     display: flex;
@@ -59,4 +59,116 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .video-demo-main{
+        width: 70%;
+        margin: -80px 0 0 0;
+    }
+    
+    .container-section-features{
+        margin: 120px 0 0 0;
+        padding: 0 20px;
+    }
+    
+    .container-section-plans{
+        margin: 120px 0 0 0;
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .video-demo-main{
+        width: 85%;
+        height: 40vh;
+        margin: -60px 0 0 0;
+        box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.2);
+    }
+    
+    .container-section-features{
+        margin: 100px 0 0 0;
+        padding: 0 15px;
+    }
+    
+    .container-section-how-works{
+        clip-path: polygon(
+        0 0,   
+        100% 5%,   
+        100% 100%, 
+        0 95%   
+        );
+    }
+    
+    .container-section-plans{
+        margin: 100px 0 0 0;
+        padding: 0 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .section-main-home{
+        padding: 0 10px;
+    }
+    
+    .video-demo-main{
+        width: 95%;
+        height: 35vh;
+        margin: -40px 0 0 0;
+        border-radius: 0.8rem;
+        box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+    }
+    
+    .video-demo{
+        border-radius: 0.8rem;
+    }
+    
+    .container-section-features{
+        margin: 80px 0 0 0;
+        padding: 0 10px;
+    }
+    
+    .container-section-how-works{
+        clip-path: polygon(
+        0 0,   
+        100% 3%,   
+        100% 100%, 
+        0 97%   
+        );
+        padding: 40px 10px;
+    }
+    
+    .container-section-plans{
+        margin: 80px 0 0 0;
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .video-demo-main{
+        width: 98%;
+        height: 30vh;
+        margin: -30px 0 0 0;
+        border-radius: 0.5rem;
+    }
+    
+    .video-demo{
+        border-radius: 0.5rem;
+    }
+    
+    .container-section-features{
+        margin: 60px 0 0 0;
+        padding: 0 5px;
+    }
+    
+    .container-section-how-works{
+        clip-path: none;
+        padding: 30px 5px;
+    }
+    
+    .container-section-plans{
+        margin: 60px 0 0 0;
+        padding: 0 5px;
+    }
 }
