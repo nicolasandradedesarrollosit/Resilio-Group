@@ -213,7 +213,7 @@
 
 @media screen and (max-width: 480px) {
     .hero-section-home{
-        min-height: 70vh;
+        min-height: 90vh;
     }
     
     .navbar-hero-section-home{
