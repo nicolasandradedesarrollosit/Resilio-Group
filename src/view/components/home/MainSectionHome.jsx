@@ -32,13 +32,13 @@ function MainSectionHome(){
                         allowfullscreen>
                     </iframe>
                 </div>
-                <section className='container-section-features'>
+                <section id='features' className='container-section-features'>
                     <SectionFeatures />
                 </section>
                 <section className='container-section-how-works'>
                     <SectionHowWorks />
                 </section>
-                <section id='planes' className='container-section-plans'>
+                <section id='plans' className='container-section-plans'>
                     <SectionPlans />
                 </section>
                 <section className='container-stats-section'>

@@ -76,7 +76,7 @@
 
 #card-plan-0,
 #card-plan-2{
-    border: 3px solid #cecece;
+    border: 3px solid #f5f5f5;
     border-radius: 1rem;
 }
 
@@ -161,7 +161,7 @@
     font-size: 1.1rem;
     font-weight: 600;
     letter-spacing: 1px;
-    color: #cecece;
+    color: #f5f5f5;
     background: transparent;
     border: 2px solid #8b5cf6;
     border-radius: 50px;

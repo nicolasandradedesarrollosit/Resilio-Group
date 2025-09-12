@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../../styles/home/heroSection.css';
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import logo from '../../../../public/logo-resilio-group.png';
 
 function HeroSectionHome(){
@@ -13,9 +14,9 @@ function HeroSectionHome(){
                     </div>
                     <div className='second-item-navbar'>
                         <ul className='list-navigate'>
-                            <li className='item-navigate'><a href="">Funcionalidades</a></li>
-                            <li className='item-navigate'><a href="">Precios</a></li>
-                            <li className='item-navigate'><Link>Contacto</Link></li>
+                            <li className='item-navigate'><HashLink smooth to = '#features'>Funcionalidades</HashLink></li>
+                            <li className='item-navigate'><HashLink smooth to = '#plans'>Precios</HashLink></li>
+                            <li className='item-navigate'><Link to={'/contact'}>Contacto</Link></li>
                         </ul>
                     </div>
                 </navbar>
@@ -28,12 +29,10 @@ function HeroSectionHome(){
                     </span>
                     <div className='container-buttons-content-hero-section'>
                         <button className='item-button' id='button-1'>
-                            Contactarse
+                            <Link to={'/contact'}>Contactarse</Link>
                         </button>
                         <button className='item-button' id='button-2'>
-                            <a href="#planes">
-                                Ver Planes
-                            </a>
+                            <HashLink smooth to = '#plans'>Ver Planes</HashLink>
                         </button>
                     </div>
                 </div>

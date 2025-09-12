@@ -1,0 +1,125 @@
+:root {
+    --primary: #8b5cf6;
+    --primary-dark: #7c3aed;
+    --secondary: #06b6d4;
+    --accent: #f59e0b;
+    --gradient-1: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
+    --gradient-2: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+    --gradient-hero: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #1f2937 100%);
+    --text-dark: #f8fafc;
+    --text-light: #ffffff;
+    --text-muted: #94a3b8;
+    --bg-dark: #0f172a;
+    --bg-card: rgba(30, 41, 59, 0.8);
+    --bg-input: #1e293b;
+    --border-color: rgba(148, 163, 184, 0.2);
+    --shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    --shadow-hover: 0 20px 60px rgba(0, 0, 0, 0.4);
+    --border-radius: 20px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-methods {
+    flex: 1;
+    max-width: 500px;
+    background: var(--bg-card);
+    backdrop-filter: blur(20px);
+    border-radius: var(--border-radius);
+    padding: 3rem;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: var(--transition);
+    height: fit-content;
+    height: 600px;
+}
+
+.contact-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--text-dark);
+    text-align: center;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border-color);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.contact-item:last-child {
+    border-bottom: none;
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.contact-text {
+    flex: 1;
+}
+
+.contact-label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+}
+
+.contact-value {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    font-weight: 600;
+    word-break: break-all;
+}
+
+.svg{
+    height: 30px;
+    width: 30px;
+}
+
+@media (max-width: 1024px) {
+    .contact-methods {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-methods {
+        padding: 2rem;
+    }
+
+    .contact-title {
+        font-size: 1.5rem;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        text-align: left;
+    }
+
+    .contact-item:hover {
+        transform: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-methods {
+        padding: 1.5rem;
+    }
+}
+
