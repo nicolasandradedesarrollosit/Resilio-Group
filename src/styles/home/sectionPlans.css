@@ -199,6 +199,12 @@
     opacity: 1;
 }
 
+.svg-icon{
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
+}
+
 @media screen and (max-width: 1024px) {
     .title-section-plans{
         font-size: 1.8rem;
@@ -317,7 +323,7 @@
     #button-card-0,
     #button-card-1,
     #button-card-2{
-        font-size: 1.2rem;
+        font-size: 1rem;
         padding: 0.7rem;
         margin: 0 0 0 15px;
         height: 60%;
@@ -384,7 +390,7 @@
     #button-card-0,
     #button-card-1,
     #button-card-2{
-        font-size: 1.1rem;
+        font-size: 0.8rem;
         padding: 0.6rem;
         margin: 0 0 0 10px;
         height: 65%;
