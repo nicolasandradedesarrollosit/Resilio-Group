@@ -12,13 +12,6 @@ function HeroSectionHome(){
                     <div className='first-item-navbar'>
                         <img className='logo-navbar' src={logo} alt='logo' />
                     </div>
-                    <div className='second-item-navbar'>
-                        <ul className='list-navigate'>
-                            <li className='item-navigate'><HashLink smooth to = '#features'>Funcionalidades</HashLink></li>
-                            <li className='item-navigate'><HashLink smooth to = '#plans'>Precios</HashLink></li>
-                            <li className='item-navigate'><Link to={'/contact'}>Contacto</Link></li>
-                        </ul>
-                    </div>
                 </navbar>
                 <div className='content-hero-section'>
                     <span className='title-content-hero-section'>
@@ -30,9 +23,6 @@ function HeroSectionHome(){
                     <div className='container-buttons-content-hero-section'>
                         <button className='item-button' id='button-1'>
                             <Link to={'/contact'}>Contactarse</Link>
-                        </button>
-                        <button className='item-button' id='button-2'>
-                            <HashLink smooth to = '#plans'>Ver Planes</HashLink>
                         </button>
                     </div>
                 </div>

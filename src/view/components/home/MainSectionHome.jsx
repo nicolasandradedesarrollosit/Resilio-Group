@@ -2,7 +2,6 @@ import React from 'react';
 import '../../../styles/home/mainSection.css';
 import SectionFeatures from './SectionFeatures';
 import SectionHowWorks from './SectionHowWorks';
-import SectionPlans from './SectionPlans';
 
 function MainSectionHome(){
     const stats = [
@@ -37,9 +36,6 @@ function MainSectionHome(){
                 </section>
                 <section className='container-section-how-works'>
                     <SectionHowWorks />
-                </section>
-                <section id='plans' className='container-section-plans'>
-                    <SectionPlans />
                 </section>
                 <section className='container-stats-section'>
                         {stats.map((item) => {

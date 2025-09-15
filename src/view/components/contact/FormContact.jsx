@@ -10,31 +10,47 @@ function FormContact(){
 
     const validations = [
         {
-        id: "name",
-        regex: /^.{6,}$/
+            id: "name",
+            regex: /^.{6,}$/
         },
         {
-        id: "subject", 
-        regex: /^(?!\s*$).+/
+            id: "phone",
+            regex: /^\d{9,13}$/
         },
         {
-        id: "message",
-        regex: /^(?!\s*$).+/
+            id: "brand", 
+            regex: /^(?!\s*$).+/
+        },
+        {
+            id: "subject", 
+            regex: /^(?!\s*$).+/
+        },
+        {
+            id: "message",
+            regex: /^(?!\s*$).+/
         }
     ];
 
     const cartels = [
         {
-        error: "El nombre debe tener más de 5 letras",
-        success: "El nombre es correcto"
+            error: "El nombre debe tener más de 5 letras",
+            success: "El nombre es correcto"
         },
         {
-        error: "El asunto no puede estar vacío",
-        success: "El asunto es correcto"
+            error: "El teléfono debe tener entre 9 y 13 números",
+            success: "El teléfono es correcto"
         },
         {
-        error: "El mensaje no puede estar vacío", 
-        success: "El mensaje es correcto"
+            error: "El nombre de tu marca no puede estar vacío",
+            success: "El nombre de tu marca es correcto"
+        },
+        {
+            error: "El asunto no puede estar vacío",
+            success: "El asunto es correcto"
+        },
+        {
+            error: "El mensaje no puede estar vacío", 
+            success: "El mensaje es correcto"
         }
     ];
 
@@ -62,25 +78,35 @@ function FormContact(){
         const name = formData.get('name');
         const subject = formData.get('subject');
         const message = formData.get('message');
+        const phone = formData.get('phone');
+        const brand = formData.get('brand');
 
         const errors = [];
         
         if (!name || name.trim().length < 6) {
             errors.push('1');
         }
-        
-        if (!subject || subject.trim() === '') {
+
+        if (!phone || phone.trim().length < 9 && phone.trim().length > 13) {
             errors.push('2');
+        }
+
+        if(!brand || brand.trim() === ''){
+            errors.push('3')
+        }
+    
+        if (!subject || subject.trim() === '') {
+            errors.push('4');
         }
         
         if (!message || message.trim() === '') {
-            errors.push('3');
+            errors.push('5');
         }
 
         return {
             isValid: errors.length === 0,
             errors,
-            data: { name: name?.trim(), subject: subject?.trim(), message: message?.trim() }
+            data: { name: name?.trim(), phone: phone?.trim(), brand: brand?.trim(), subject: subject?.trim(), message: message?.trim() }
         };
     };
 
@@ -131,8 +157,6 @@ function FormContact(){
                     url = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
             }
             
-            console.log('URL final:', url);
-            console.log('=======================');
             return url;
         };
 
@@ -271,7 +295,7 @@ function FormContact(){
                     try {
                         localStorage.setItem('preferredEmailClient', client);
                     } catch (e) {
-                        console.log(e);
+                        console.error(e);
                     }
                     document.body.removeChild(modal);
                     resolve(client);
@@ -310,7 +334,6 @@ function FormContact(){
                 window.open(emailUrl, '_blank');
             }
 
-            console.log(`Email abierto en ${emailClients[preferredClient]?.name || 'cliente predeterminado'}`);
             
         } catch (error) {
             console.error('Error al enviar email:', error);
@@ -331,14 +354,18 @@ function FormContact(){
             
             const emailBody = `Hola,
 
-        Mi nombre es: ${validation.data.name}
+            Mi nombre es: ${validation.data.name}
 
-        Mensaje:
-        ${validation.data.message}
+            Mi número de teléfono es: ${validation.data.phone}
 
-        ---
-        Enviado desde el formulario de contacto de tu sitio web.`;
-            
+            El nombre de mi marca es: ${validation.data.brand}
+
+            Mensaje:
+            ${validation.data.message}
+
+            ---
+            Enviado desde el formulario de contacto de tu sitio web.`;
+                
             const destinationEmail = 'resiliog@gmail.com';
             
             sendSmartEmail(destinationEmail, validation.data.subject, emailBody);
@@ -349,76 +376,120 @@ function FormContact(){
       <div className="form-container">
         <h2 className="form-title">Cuéntanos tu proyecto</h2>
         <form id="contactForm" className="contact-form" onSubmit={submitMail}>
-          <div className="field-form">
-            <input
-              id="name"
-              name="name" 
-              type="text"
-              placeholder=" "
-              onChange={validateField}
-            />
-            <label htmlFor="name">Nombre completo</label>
-            
-            {validationStates.name === false && (
-                <span className="cartel-validator-error">
-                    {cartels[0].error}
+            <div className="field-form">
+                <input
+                id="name"
+                name="name" 
+                type="text"
+                placeholder=" "
+                onChange={validateField}
+                />
+                <label htmlFor="name">Nombre completo</label>
+                
+                {validationStates.name === false && (
+                    <span className="cartel-validator-error">
+                        {cartels[0].error}
+                    </span>
+                )}
+                {validationStates.name === true && (
+                <span className="cartel-validator-success">
+                    {cartels[0].success}
                 </span>
-            )}
-            {validationStates.name === true && (
-              <span className="cartel-validator-success">
-                {cartels[0].success}
-              </span>
-            )}
-          </div>
-
-          <div className="field-form">
-            <input
-              id="subject"
-              name="subject"
-              type="text" 
-              placeholder=" "
-              onChange={validateField}
-            />
-            <label htmlFor="subject">Asunto</label>
+                )}
+            </div>
             
-            {validationStates.subject === false && (
-              <span className="cartel-validator-error">
-                {cartels[1].error}
-              </span>
-            )}
-            {validationStates.subject === true && (
-              <span className="cartel-validator-success">
-                {cartels[1].success}
-              </span>
-            )}
-          </div>
-
-          <div className="field-form">
-            <textarea
-              id="message"
-              name="message"
-              placeholder=" " 
-              onChange={validateField}
-            ></textarea>
-            <label htmlFor="message">Cuéntanos sobre tu proyecto</label>
+            <div className="field-form">
+                <input
+                id="phone"
+                name="phone"
+                type="text" 
+                placeholder=" "
+                onChange={validateField}
+                />
+                <label htmlFor="phone">Teléfono</label>
             
-            {validationStates.message === false && (
-              <span className="cartel-validator-error">
-                {cartels[2].error}
-              </span>
-            )}
-            {validationStates.message === true && (
-              <span className="cartel-validator-success">
-                {cartels[2].success}
-              </span>
-            )}
-          </div>
+                {validationStates.phone === false && (
+                <span className="cartel-validator-error">
+                    {cartels[1].error}
+                </span>
+                )}
+                {validationStates.phone === true && (
+                <span className="cartel-validator-success">
+                    {cartels[1].success}
+                </span>
+                )}
+            </div>
 
-          <div className="submit-container">
-            <button type="submit" className="submit-btn">
-              Enviar mensaje
-            </button>
-          </div>
+            <div className="field-form">
+                <input
+                id="brand"
+                name="brand"
+                type="text" 
+                placeholder=" "
+                onChange={validateField}
+                />
+                <label htmlFor="brand">Nombre de tu marca</label>
+            
+                {validationStates.brand === false && (
+                <span className="cartel-validator-error">
+                    {cartels[2].error}
+                </span>
+                )}
+                {validationStates.brand === true && (
+                <span className="cartel-validator-success">
+                    {cartels[2].success}
+                </span>
+                )}
+            </div>
+
+            <div className="field-form">
+                <input
+                id="subject"
+                name="subject"
+                type="text" 
+                placeholder=" "
+                onChange={validateField}
+                />
+                <label htmlFor="subject">Asunto</label>
+            
+                {validationStates.subject === false && (
+                <span className="cartel-validator-error">
+                    {cartels[3].error}
+                </span>
+                )}
+                {validationStates.subject === true && (
+                <span className="cartel-validator-success">
+                    {cartels[3].success}
+                </span>
+                )}
+            </div>
+
+            <div className="field-form">
+                <textarea
+                id="message"
+                name="message"
+                placeholder=" " 
+                onChange={validateField}
+                ></textarea>
+                <label htmlFor="message">Cuéntanos sobre tu proyecto</label>
+                
+                {validationStates.message === false && (
+                <span className="cartel-validator-error">
+                    {cartels[4].error}
+                </span>
+                )}
+                {validationStates.message === true && (
+                <span className="cartel-validator-success">
+                    {cartels[4].success}
+                </span>
+                )}
+            </div>
+
+            <div className="submit-container">
+                <button type="submit" className="submit-btn">
+                Enviar mensaje
+                </button>
+            </div>
         </form>
       </div>
     </>

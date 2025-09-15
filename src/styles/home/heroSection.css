@@ -34,34 +34,13 @@
 }
 
 .logo-navbar{
-    height: 30px;
-    width: 30px;
+    height: 80px;
+    width: 80px;
 }
 
 .title-navbar{
     font-weight: 700;
     font-size: 1.2rem;
-}
-
-.second-item-navbar{
-    display: flex;
-    height: 100%;
-    width: auto;
-    justify-content: center;
-    align-items: center;
-}
-
-.list-navigate{
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-}
-
-.item-navigate{
-    font-weight: 600;
-    opacity: 0.7;
-    cursor: pointer;
-    transition: opacity 0.3s ease;
 }
 
 .item-navigate:hover {
@@ -132,19 +111,10 @@
     transform: translateY(0); 
 }
 
-#button-2{
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(12px) saturate(150%);
-    -webkit-backdrop-filter: blur(12px) saturate(150%);
-}
-
-#button-2:hover {
-    background: rgba(170, 110, 255, 0.25);
-    transform: translateY(-2px) scale(1.03);
-}
-
-#button-2:active {
-    transform: translateY(0) scale(0.98);
+@media screen and (max-width: 1281px){
+    .hero-section-home{
+        min-height: 75vh;
+    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -158,9 +128,6 @@
         width: 100%;
     }
     
-    .list-navigate{
-        gap: 20px;
-    }
 }
 
 @media screen and (max-width: 768px) {
@@ -173,18 +140,6 @@
     
     .first-item-nabar{
         height: auto;
-    }
-    
-    .second-item-navbar{
-        height: auto;
-    }
-    
-    .list-navigate{
-        gap: 15px;
-    }
-    
-    .item-navigate{
-        font-size: 0.9rem;
     }
     
     .content-hero-section{
@@ -223,18 +178,8 @@
     }
     
     .logo-navbar{
-        height: 25px;
-        width: 25px;
-    }
-    
-    .list-navigate{
-        gap: 10px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    .item-navigate{
-        font-size: 0.8rem;
+        height: 40px;
+        width: 40px;
     }
     
     .content-hero-section{
@@ -292,7 +237,7 @@
     }
 }
 
-@media screen and (max-height: 750px){
+@media screen and (max-height: 800px){
     .container-buttons-content-hero-section{
         padding-bottom: 5rem;
     }

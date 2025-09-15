@@ -7,9 +7,9 @@ function Footer(){
         <>
             <div className="container-rows-footer">
                 <div className="row-1-footer">
-                    <Link className="item">Contacto</Link>
-                    <Link className="item">Términos de servicio</Link>
-                    <Link className="item">Política de privacidad</Link>
+                    <Link className="item" to={'/contact'}>Contacto</Link>
+                    <Link className="item" to={'/service'}>Términos de servicio</Link>
+                    <Link className="item" to={'/privacity'}>Política de privacidad</Link>
                 </div>
                 <div className="row-2-footer">
                     <span>Resilio Group ® Todos los derechos reservados.</span>
