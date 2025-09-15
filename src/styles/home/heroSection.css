@@ -7,7 +7,8 @@
               radial-gradient(1200px 600px at 20% -10%, rgba(170, 110, 255, .35), transparent 60%),
               radial-gradient(900px 500px at 90% 10%, rgba(120, 70, 255, .25), transparent 70%);
     color: hsl(280, 100%, 97%);
-    min-height: 60vh;   
+    min-height: 60vh;
+    padding: 7rem 0;   
 }
 
 .navbar-hero-section-home{
@@ -81,7 +82,7 @@
     display: flex;
     flex-direction: row;
     gap: 30px;
-    margin: 50px 0 0 0;
+    margin: 25px 0 0 0;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -111,12 +112,6 @@
     transform: translateY(0); 
 }
 
-@media screen and (max-width: 1281px){
-    .hero-section-home{
-        min-height: 75vh;
-    }
-}
-
 @media screen and (max-width: 1024px) {
     .title-content-hero-section{
         font-size: 3rem;
@@ -126,6 +121,10 @@
     .subtitle-content-hero-section{
         font-size: 1.2rem;
         width: 100%;
+    }
+
+    .hero-section-home{
+        padding: 0;
     }
     
 }
