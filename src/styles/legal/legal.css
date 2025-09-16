@@ -10,6 +10,12 @@
   line-height: 1.6;
 }
 
+#top{
+  display: flex;
+  height: 0;
+  width: 0;
+}
+
 .navbar-legal {
   position: sticky;
   top: 0;

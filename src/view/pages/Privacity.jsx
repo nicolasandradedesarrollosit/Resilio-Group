@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import GoBack from '../components/others/GoBack';
 import { Link } from 'react-router-dom';
 import '../../styles/legal/legal.css';
 import logo from '../../../public/logo-resilio-group.png';
 
 function Privacity(){
+  useEffect(() => {
+    const contenedor = document.getElementById("top");
+    if (contenedor) {
+      contenedor.scrollIntoView({ behavior: "instant" });
+    }
+  }, []);
   return(
     <>
+      <div id='top'></div>
+
       <main className='main-section-legal'>
         <nav className='navbar-legal'>
           <div className='first-item-legal'>
