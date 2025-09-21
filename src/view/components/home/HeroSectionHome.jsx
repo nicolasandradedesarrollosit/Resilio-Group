@@ -15,7 +15,7 @@ function HeroSectionHome(){
                 </navbar>
                 <div className='content-hero-section'>
                     <span className='title-content-hero-section'>
-                        Somos Resilio Group
+                        Somos Resilio
                     </span>
                     <span className='subtitle-content-hero-section'>
                         Una comunidad, un grupo de jóvenes  amantes de la creatividad y de las buenas experiencias
